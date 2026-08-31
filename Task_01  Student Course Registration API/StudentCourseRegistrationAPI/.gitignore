@@ -1,0 +1,33 @@
+# Visual Studio / .NET generated files
+.vs/
+.vscode/
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.bak
+*.pdb
+*.dll
+*.exe
+
+# Build and test artifacts
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# User-specific / local config
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+*.csproj.user
+*.slnx.user
+
+# JetBrains / IDE
+.idea/
+*.iml
