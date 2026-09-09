@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Login successful.",
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJqdGkiOiJhNmYwY2E0NS05OTViLTQxZmEtYTE5My00MmIxM2E5YWQ1NTUiLCJleHAiOjE3ODg4NzMyNDYsImlzcyI6IioiLCJhdWQiOiIqIn0.f_Fm9P8oulJ1kuy3Z7jk3r3Gmowl3RHO-QWxsI7rfhE",
+    "user": {
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "role": "Admin"
+    }
+  }
+}
+
