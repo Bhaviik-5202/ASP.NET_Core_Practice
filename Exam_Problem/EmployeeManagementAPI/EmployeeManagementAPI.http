@@ -1,0 +1,87 @@
+@EmployeeManagementAPI_HostAddress = http://localhost:5122
+
+### 1. Add a new employee (POST)
+POST {{EmployeeManagementAPI_HostAddress}}/api/employees
+Content-Type: application/json
+
+{
+  "employeeName": "Rahul Sharma",
+  "emailAddress": "rahul.sharma@example.com",
+  "mobileNumber": "9876543210",
+  "employeeCode": "EMP101",
+  "salary": 45000.00,
+  "joiningDate": "2025-02-15T00:00:00",
+  "birthDate": "1995-06-20T00:00:00",
+  "isActive": true
+}
+
+###
+
+### 2. Get all employees (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees
+Accept: application/json
+
+###
+
+### 3. Get employee by ID (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/1
+Accept: application/json
+
+###
+
+### 4. Update employee (PUT)
+PUT {{EmployeeManagementAPI_HostAddress}}/api/employees/1
+Content-Type: application/json
+
+{
+  "employeeName": "Rahul V. Sharma",
+  "emailAddress": "rahul.sharma@example.com",
+  "mobileNumber": "9876543210",
+  "employeeCode": "EMP101",
+  "salary": 52000.00,
+  "joiningDate": "2025-02-15T00:00:00",
+  "birthDate": "1995-06-20T00:00:00",
+  "isActive": true
+}
+
+###
+
+### 5. Delete employee (DELETE)
+DELETE {{EmployeeManagementAPI_HostAddress}}/api/employees/1
+Accept: application/json
+
+###
+
+### 6. Get only active employees (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/active
+Accept: application/json
+
+###
+
+### 7. Search employees by name (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/search?name=Rahul
+Accept: application/json
+
+###
+
+### 8. Get employees within salary range (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/salary-range?min=30000&max=60000
+Accept: application/json
+
+###
+
+### 9. Get employees who joined within date range (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/joined-between?from=2025-01-01&to=2025-12-31
+Accept: application/json
+
+###
+
+### 10. Get employee summary (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/summary
+Accept: application/json
+
+###
+
+### 11. Get highest-paid employee (GET)
+GET {{EmployeeManagementAPI_HostAddress}}/api/employees/highest-paid
+Accept: application/json
