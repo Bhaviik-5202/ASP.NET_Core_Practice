@@ -1,0 +1,85 @@
+@ProductManagementAPI_HostAddress = http://localhost:5245
+
+### 1. Create a Valid Product (POST /api/products)
+POST {{ProductManagementAPI_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productName": "Wireless Ergonomic Mouse",
+  "productCode": "P-MS-001",
+  "category": "Electronics",
+  "price": 1250.00,
+  "stockQuantity": 50,
+  "manufactureDate": "2026-08-01T10:00:00",
+  "expiryDate": "2030-08-01T10:00:00",
+  "isAvailable": true
+}
+
+### 2. Create another Product (POST /api/products)
+POST {{ProductManagementAPI_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productName": "Mechanical Gaming Keyboard",
+  "productCode": "P-KB-002",
+  "category": "Electronics",
+  "price": 4500.50,
+  "stockQuantity": 20,
+  "manufactureDate": "2026-07-15T09:00:00",
+  "expiryDate": "2031-07-15T09:00:00",
+  "isAvailable": true
+}
+
+### 3. Validation Error Test - Invalid Input (POST /api/products)
+POST {{ProductManagementAPI_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "productName": " A ",
+  "productCode": "P KB 003",
+  "category": "",
+  "price": -100,
+  "stockQuantity": -5,
+  "manufactureDate": "2030-01-01T00:00:00",
+  "expiryDate": "2020-01-01T00:00:00",
+  "isAvailable": true
+}
+
+### 4. Get All Products (GET /api/products)
+GET {{ProductManagementAPI_HostAddress}}/api/products
+Accept: application/json
+
+### 5. Get Product By ID (GET /api/products/1)
+GET {{ProductManagementAPI_HostAddress}}/api/products/1
+Accept: application/json
+
+### 6. Get Available Products (GET /api/products/available)
+GET {{ProductManagementAPI_HostAddress}}/api/products/available
+Accept: application/json
+
+### 7. Get Products in Price Range (GET /api/products/price-range?min=1000&max=5000)
+GET {{ProductManagementAPI_HostAddress}}/api/products/price-range?min=1000&max=5000
+Accept: application/json
+
+### 8. Get Product Summary (GET /api/products/summary)
+GET {{ProductManagementAPI_HostAddress}}/api/products/summary
+Accept: application/json
+
+### 9. Update Product (PUT /api/products/1)
+PUT {{ProductManagementAPI_HostAddress}}/api/products/1
+Content-Type: application/json
+
+{
+  "productName": "Wireless Ergonomic Mouse Pro",
+  "productCode": "P-MS-001",
+  "category": "Electronics",
+  "price": 1499.99,
+  "stockQuantity": 45,
+  "manufactureDate": "2026-08-01T10:00:00",
+  "expiryDate": "2030-08-01T10:00:00",
+  "isAvailable": true
+}
+
+### 10. Delete Product (DELETE /api/products/1)
+DELETE {{ProductManagementAPI_HostAddress}}/api/products/1
+Accept: application/json
